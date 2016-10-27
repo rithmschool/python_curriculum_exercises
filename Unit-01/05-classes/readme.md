@@ -1,10 +1,30 @@
 # Classes
 
-### Application
+### Part 1
+
+Answer the following questions
+
+- What is a class?
+- What is an instance?
+- What is inheritance?
+- What is multiple inheritance?
+- What is polymorphism?
+
+### Part 2
 
 - Inheritance (Multiple)
 - Class methods
 - Instance methods
+
+**Cuisine**
+**Restaurant**
+**FoodTruck**
+
+Each cuisine should have a `name`, `taste_level`, `spicy_level`, `most_common_dish`
+
+Each cusine instance should have a method called `describe`, which should be implemented by it's subclasses
+
+Each restaurant can inherit from multiple cuisines.
 
 ### Bonus
 
