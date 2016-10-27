@@ -1,3 +1,3 @@
 # Blueprints 
 
-Refactor the artist and albums to use blueprints
+Refactor the users and messages application to use blueprints

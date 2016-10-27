@@ -1,3 +1,7 @@
 # WTForms
 
-Refactor your Artist and Album application to use WTForms
+Refactor your User and Message application to use WTForms. 
+
+### Bonus
+
+Add client side validation!

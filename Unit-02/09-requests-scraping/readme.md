@@ -1,5 +1,3 @@
 # Requests + Web Scraping
 
-Create albums and artists 
-
-## Build a python wrapper on an API
+It's time to start getting data from the Twitter API, rr scrape data from somewhere else.

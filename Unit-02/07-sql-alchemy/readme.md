@@ -1,12 +1,12 @@
 # SQL Alchemy
 
-### Part I - Artist
+### Part I - User
 
-It's time to build a new application! This application should have full CRUD on one resource. 
+It's time to build a new application! This application should have full CRUD on the user resource. Each user should have a unique id, username, email, first_name and last_name, 
 
-### Part II - Album
+### Part II - Message
 
-- Now that you have one resource, it's time to add another!
+- Now that you have one resource, it's time to add another! Each user should be able to write many messages. Each message should have a unique id and text (which should be limited to 100 characters)
 
 ### Bonuses
 
