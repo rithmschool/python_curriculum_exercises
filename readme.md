@@ -8,6 +8,7 @@
 - [04 Modules](./Unit-01/04-modules/readme.md)
 - [05 Classes](./Unit-01/05-classes/readme.md)
 - [06 Odds and Ends](./Unit-01/06-odds-and-ends/readme.md)
+- [07 Requests and Web Scraping](./Unit-01/07-requests-scraping/readme.md)
 
 ### Unit 2 - Flask Fundamentals + SQL
 
@@ -19,7 +20,7 @@
 - [06 Testing With Flask](./Unit-02/06-testing/readme.md)
 - [07 SQL Alchemy](./Unit-02/07-sql-alchemy/readme.md)
 - [08 Server Side Validation with WTForms](./Unit-02/08-forms/readme.md)
-- [09 Requests and Web Scraping](./Unit-02/09-requests-scraping/readme.md)
+
 
 ### Unit 3 - Intermediate Flask
 
