@@ -165,16 +165,31 @@ intersection([1,2,3], [2,3,4]) # [2,3]
 
 ### `once`
 
-This function accepts a function and returns a new function that can only be invoked once. If the function is invoked more than once, it should return `undefined`.
+This function accepts a function and returns a new function that can only be invoked once. If the function is invoked more than once, it should return `undefined`. **hint** you will need to define a new function inside of your once function and return that function. You can add properties to your inner function to see if it has run already.
 
 ```py
 def add(a,b):
     return a+b
-}
 
-var oneAddition = once(add)
+oneAddition = once(add)
 
 oneAddition(2,2) # 4
 oneAddition(2,2) # undefined
 oneAddition(12,200) # undefined
 ```
+
+### Super bonus
+
+Refactor your `once` code to use a decorator so that you can run
+
+```py
+@run_once
+def add(a,b):
+    return a+b
+
+add(2,2) # 4
+add(2,20) # None
+add(12,20) # None
+```
+
+

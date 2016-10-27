@@ -36,7 +36,7 @@ Write the following Python code to do the following (complete ALL of these using
 Write the following Python code to do the following (Complete ALL of the following using `dictionary comprehension`)
 
 1. Given a list `[("name", "Elie"), ("job", "Instructor")]`, create a dictionary that looks like this `{'job': 'Instructor', 'name': 'Elie'}` (the order does not matter)
-2. Given two lists `["CA", "NJ", "RI"]` and `["California", "New Jersey", "Rhode Island"]` return a dictionary that looks like this `{'CA': 'California', 'NJ': 'New Jersey', 'RI': 'Rhode Island'}`
+2. Given two lists `["CA", "NJ", "RI"]` and `["California", "New Jersey", "Rhode Island"]` return a dictionary that looks like this `{'CA': 'California', 'NJ': 'New Jersey', 'RI': 'Rhode Island'}`. You can research the `zip` method to help you.
 3. Create a dictionary with the key as a vowel in the alphabet and the value as 0. Your dictionary should look like this `{'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}`. (Do not use the `fromkeys` method).
 4. Create a dictionary starting with the key of the position of the letter and the value as the letter in the alphabet. You should return something like this (hint - use `chr(65)` to get the first letter):
 
@@ -71,5 +71,5 @@ Write the following Python code to do the following (Complete ALL of the followi
 
 ### Super Bonus
 
-Using **both** list comprehension and dictionary comprehension, given the string "awesome sauce", return a dictionary with the keys as vowels and the values as the count of vowels. Your dictionary should look like `{'a': 2, 'e': 3, 'i': 0, 'o': 1, 'u': 1}`
+Given the string "awesome sauce" return a dictionary with the keys as vowels and the values as the count of vowels. Your dictionary should look like `{'a': 2, 'e': 3, 'i': 0, 'o': 1, 'u': 1}`
 
