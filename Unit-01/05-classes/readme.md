@@ -9,22 +9,17 @@ Answer the following questions
 - What is inheritance?
 - What is multiple inheritance?
 - What is polymorphism?
+- What is `method resolution order` or `MRO`?
 
 ### Part 2
 
-- Inheritance (Multiple)
-- Class methods
-- Instance methods
+Each cuisine instance should have a `name`, `taste_level`, `spicy_level`, `most_common_dish`
 
-**Cuisine**
-**Restaurant**
-**FoodTruck**
+Each cuisine instance should have a method called `describe`, which should be implemented by it's subclasses using polymorphsim. Also note that each restaurant can inherit from multiple cuisines.
 
-Each cuisine should have a `name`, `taste_level`, `spicy_level`, `most_common_dish`
+Each restaurant instance should have a `name`, `location`, `rating` (which should be a number from 1 to 5).
 
-Each cusine instance should have a method called `describe`, which should be implemented by it's subclasses
-
-Each restaurant can inherit from multiple cuisines.
+Each restaurant instance should have a method called `display_base_class` which lists the classes that it inherited from. You can read more about how to figure this out [here](http://stackoverflow.com/questions/1401661/python-list-all-base-classes-in-a-hierarchy-of-given-class)
 
 ### Bonus
 
