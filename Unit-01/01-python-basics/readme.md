@@ -2,7 +2,7 @@
 
 ### Python vs. JavaScript
 
-Fill in the table below comparing how you might write each expression in JavaScript versus how you might write it in Python. The first example has been done for you. Feel free to consult the docs for these languages if you get stuck!
+Complete the exercises below by writing an expression in JavaScript and Python that complete the same task. The first example has been done for you. Feel free to consult the docs for these languages if you get stuck!
 
 1. Declare a variable called `first` and assign it to the value `"Hello World"`.
 
