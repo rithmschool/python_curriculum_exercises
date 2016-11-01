@@ -1,4 +1,3 @@
-import math
 from functools import wraps
 import re
 
@@ -19,7 +18,7 @@ def is_prime(num):
     if num % 2 == 0 or num <= 1:
         return False
 
-    sqr = int(math.sqrt(num)) + 1
+    sqr = int(num**0.5) + 1
 
     for divisor in range(3, sqr, 2):
         if num % divisor == 0:
