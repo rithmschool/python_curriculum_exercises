@@ -35,7 +35,7 @@ is_prime(122) # False
 This function should return a generator that yields in the next prime number. The highest it should go should be 1000.
 
 ```py
-gen = get_next_prime()
+gen = get_next_prime(13)
 
 next(gen)
 ```
