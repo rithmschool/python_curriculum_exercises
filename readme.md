@@ -19,7 +19,7 @@
 - [05 SQL With Flask and Postgres](./Unit-02/05-sql-flask/readme.md)
 - [06 SQL Alchemy, Part I](./Unit-02/08-sql-alchemy-1/readme.md)
 - [07 Testing With Flask](./Unit-02/07-testing/readme.md)
-- [08 SQL Alchemy, Part I](./Unit-02/08-sql-alchemy-2/readme.md)
+- [08 SQL Alchemy, Part II](./Unit-02/08-sql-alchemy-2/readme.md)
 - [09 Server Side Validation with WTForms](./Unit-02/09-forms/readme.md)
 
 

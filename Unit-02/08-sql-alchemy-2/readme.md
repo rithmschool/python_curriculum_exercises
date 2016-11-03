@@ -1,4 +1,4 @@
-# SQL Alchemy
+# Flask-SQLAlchemy, Part II
 
 ### Part I - User
 
