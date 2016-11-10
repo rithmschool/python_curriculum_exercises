@@ -5,7 +5,7 @@ Create a new Flask application with the following:
 ### Part 1
 
 - A `base.html` template for others to inherit from
-- A route for `/person/<name>/<age>` which renders a template that displays the name and age entered for the URL. That template shoudl inherit from `base.html` 
+- A route for `/person/<name>/<age>` which renders a template that displays the name and age entered for the URL. That template should inherit from `base.html` 
 
 ### Part 2
 
