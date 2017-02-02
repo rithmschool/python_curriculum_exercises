@@ -12,7 +12,6 @@
 - [08 Testing With Flask](./Unit-01/08-testing/readme.md)
 - [09 Server Side Validation with WTForms](./Unit-01/09-forms/readme.md)
 
-
 ### Unit 2 - Intermediate Flask
 
 - [01 Structuring Larger Flask Applications](./Unit-02/01-blueprints/readme.md)
