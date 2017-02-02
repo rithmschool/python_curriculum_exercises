@@ -1,32 +1,29 @@
-from app import app
-from db import create_snack
+from app import app,db, Snack
 from flask_testing import TestCase
 import unittest
-import psycopg2
 
 class BaseTestCase(TestCase):
     def create_app(self):
-        conn = psycopg2.connect("dbname=flask-sql-snacks")
-        cur = conn.cursor()
-        cur.execute("CREATE TABLE IF NOT EXISTS snacks (id serial PRIMARY KEY, name text, kind text);")
-        conn.commit()
-        conn.close()
+        app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///testing.db'
         return app
 
     def setUp(self):
-        create_snack("hershey", "chocolate")
+        db.create_all()
+        snack1 = Snack("Hershey", "Chocolate")
+        snack2 = Snack("Skittles", "Candy")
+        snack3 = Snack("Chips Ahoy", "Cookie")
+        db.session.add_all([snack1, snack2, snack3])
+        db.session.commit()
 
     def tearDown(self):
-        conn = psycopg2.connect("dbname=flask-sql-snacks")
-        cur = conn.cursor()
-        cur.execute("DROP TABLE snacks;")
-        conn.commit()
-        conn.close()
+        db.drop_all()
 
     def test_index(self):
         response = self.client.get('/snacks', content_type='html/text')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'hershey chocolate', response.data)
+        self.assertIn(b'Hershey Chocolate', response.data)
+        self.assertIn(b'Skittles Candy', response.data)
+        self.assertIn(b'Chips Ahoy Cookie', response.data)
 
     def test_show(self):
         response = self.client.get('/snacks/1')
@@ -35,17 +32,17 @@ class BaseTestCase(TestCase):
     def test_create(self):
         response = self.client.post(
             '/snacks',
-            data=dict(name="New", kind="Snack"),
+            data=dict(name="New", kind="Student"),
             follow_redirects=True
         )
-        self.assertIn(b'New Snack', response.data)
+        self.assertIn(b'New Student', response.data)
 
     def test_edit(self):
         response = self.client.get(
             '/snacks/1/edit'
         )
-        self.assertIn(b'hershey', response.data)
-        self.assertIn(b'chocolate', response.data)
+        self.assertIn(b'Hershey', response.data)
+        self.assertIn(b'Chocolate', response.data)
 
     def test_update(self):
         response = self.client.patch(
@@ -54,14 +51,14 @@ class BaseTestCase(TestCase):
             follow_redirects=True
         )
         self.assertIn(b'updated information', response.data)
-        self.assertNotIn(b'hershey chocolate', response.data)
+        self.assertNotIn(b'Hershey Chocolate', response.data)
 
     def test_delete(self):
         response = self.client.delete(
             '/snacks/1',
             follow_redirects=True
         )
-        self.assertNotIn(b'hershey chocolate', response.data)
+        self.assertNotIn(b'Hershey Chocolate', response.data)
 
 
 if __name__ == '__main__':

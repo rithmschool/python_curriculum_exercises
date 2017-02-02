@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="POST" action="{{url_for('index')}}">
+    <input type="text" name="name">
+    <input type="text" name="kind">
+    <input type="submit" value="Add Snack!">
+</form>
+
+{% endblock %}
