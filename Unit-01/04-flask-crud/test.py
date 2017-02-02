@@ -1,8 +1,6 @@
 from snack import Snack
-from app import app
+from app import app, snack_list
 import unittest
-
-snack_list = []
 
 class TestSnackMethods(unittest.TestCase):
 
