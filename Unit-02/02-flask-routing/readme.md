@@ -4,6 +4,6 @@ Build a simple calculator! You should have routes that can perform addition, sub
 
 ### Bonus
 
-Refactor your code so that all of these operations can be done in a single route!
+Refactor your code so that all of these operations can be done in a single route called `/math`
 
 
