@@ -2,9 +2,9 @@
 
 For this assignment you will be creating a very small flask application. Your application should:
 
-- have a route for `/welcome`, which responds with the string "Welcome"
-- have a route for `/welcome/home`, which responds with the string "Welcome home"
-- have a route for `/welcome/back`, which responds with the string "Welcome back!"
+- have a route for `/welcome`, which responds with the string "welcome"
+- have a route for `/welcome/home`, which responds with the string "welcome home"
+- have a route for `/welcome/back`, which responds with the string "welcome back!"
 
 ### Bonus
 
