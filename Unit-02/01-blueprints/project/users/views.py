@@ -14,8 +14,8 @@ def index():
     if request.method == "POST":
         form = UserForm()
         if form.validate_on_submit():
-            new_owner = User(request.form['first_name'], request.form['last_name'])
-            db.session.add(new_owner)
+            new_user = User(request.form['first_name'], request.form['last_name'])
+            db.session.add(new_user)
             db.session.commit()
             flash('User Created!')
             return redirect(url_for('users.index'))
