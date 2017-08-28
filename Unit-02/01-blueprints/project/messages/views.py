@@ -19,7 +19,7 @@ def index(user_id):
             new_message = Message(form.text.data, user.id)
             db.session.add(new_message)
             db.session.commit()
-            flash('User Created!')
+            flash('Message Created!')
             return redirect(url_for('messages.index', user_id=user.id))
         return render_template('messages/new.html', form=form, user=user)
     return render_template('messages/index.html', user=user)
@@ -52,6 +52,3 @@ def show(user_id,id):
         db.session.commit()
         return redirect(url_for('messages.index', user_id=user_id))
     return render_template('messages/show.html', message=found_message)
-
-
-
