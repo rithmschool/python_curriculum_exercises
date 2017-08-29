@@ -1,11 +1,9 @@
 # Many to Many
 
-Create a many to many application with employees and departments.
+Start out with an application that has a 1 to many relationship between users and messages (a user has many messages, a message belongs to 1 user).  Add a tag feature in which a tag can have many messages and a message can have many tags.
 
 Your app should have the following features:
 
-* Full CRUD on employees
-	* The index page for employees should show the department name
-* Able to see index page and show page for department (no need to have create, delete, or edit for departments)
-	* The departments show page should show all employees in the department
-* Use WTF for all of your forms in employees
+* Full CRD on tags (no update)
+	* The show page for a message should show all tags
+
