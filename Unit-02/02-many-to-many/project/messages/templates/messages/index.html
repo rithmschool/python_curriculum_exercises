@@ -9,9 +9,16 @@
 </p>
 
 {% for message in user.messages %}
+    <h2>{{message.text}}</h2>
     <p>
         <a href="{{url_for('messages.show', user_id=user.id, id=message.id)}}">See more about {{message.text}}</a> |
         <a href="{{url_for('messages.edit', user_id=user.id, id=message.id)}}">Edit a message</a>
+        <h5>Tags:</h5>
+        {% for tag in message.tags %}
+        <p>
+          {{tag.text}} | <a href="{{url_for('tags.edit', id=tag.id)}}">Edit this tag!</a>
+        </p>
+        {% endfor %}
     </p>
 {% endfor %}
 
