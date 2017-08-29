@@ -5,7 +5,7 @@
 <form method="POST" action="{{url_for('messages.show', user_id=message.user.id, id=message.id)}}?_method=PATCH">
       {{ form.csrf_token }}
   <p>
-    {{ form.text(placeholder="text") }}
+    {{ form.text }}
     <span class="text-danger">
       {% if form.text.errors %}
         {% for error in form.text.errors %}
@@ -13,6 +13,9 @@
         {% endfor %}
       {% endif %}
     </span>
+  </p>
+  <p>
+      {{form.tags}}
   </p>
   <button class="btn btn-success" type="submit">Edit Message!</button>
 </form>
