@@ -85,10 +85,11 @@ class BaseTestCase(TestCase):
     def test_messages_create(self):
         response = self.client.post(
             '/users/1/messages/',
-            data=dict(text="Hi Matt!!", user_id=3),
+            data=dict(content="Hi Matt!!", user_id=3),
             follow_redirects=True
         )
         self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Hi Matt!!', response.data)
 
     def test_messages_edit(self):
         response = self.client.get(
@@ -104,10 +105,10 @@ class BaseTestCase(TestCase):
     def test_messages_update(self):
         response = self.client.patch(
             '/users/1/messages/1?_method=PATCH',
-            data=dict(text="Welcome Back Elie!"),
+            data=dict(content="Welcome Back Elie!"),
             follow_redirects=True
         )
-        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Welcome Back Elie!', response.data)
 
     def test_messages_delete(self):
         response = self.client.delete(
