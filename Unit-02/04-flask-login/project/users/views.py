@@ -1,6 +1,6 @@
 from flask import redirect, render_template, request, url_for, Blueprint, flash
 from project.users.forms import UserForm, LoginForm
-from project.users.models import User
+from project.models import User
 from project import db, bcrypt
 from project.decorators import ensure_correct_user, prevent_login_signup
 from sqlalchemy.exc import IntegrityError
@@ -58,9 +58,9 @@ def signup():
 @login_required
 @ensure_correct_user
 def edit(id):
-    owner=User.query.get(id)
-    form = UserForm(obj=owner)
-    return render_template('users/edit.html', form=form, owner=owner)
+    user=User.query.get(id)
+    form = UserForm(obj=user)
+    return render_template('users/edit.html', form=form, user=user)
 
 @users_blueprint.route('/<int:id>', methods =["GET", "PATCH", "DELETE"])
 @login_required
@@ -77,14 +77,14 @@ def show(id):
             db.session.add(found_user)
             db.session.commit()
             return redirect(url_for('users.index'))
-        return render_template('users/edit.html', form=form, owner=found_user)
+        return render_template('users/edit.html', form=form, user=found_user)
     if request.method == b"DELETE":
         db.session.delete(found_user)
         db.session.commit()
-        session.pop('user_id')
+        logout_user()
         flash('User Deleted')
         return redirect(url_for('users.login'))
-    return render_template('users/show.html', owner=found_user)
+    return render_template('users/show.html', user=found_user)
 
 
 @users_blueprint.route('/logout')

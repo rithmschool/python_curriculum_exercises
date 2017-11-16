@@ -1,7 +1,7 @@
 """empty message
 
 Revision ID: 2ec00b9d7531
-Revises: 
+Revises:
 Create Date: 2017-08-27 13:59:11.933016
 
 """
@@ -29,7 +29,7 @@ def upgrade():
     )
     op.create_table('messages',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('text', sa.Text(), nullable=True),
+    sa.Column('content', sa.Text(), nullable=True),
     sa.Column('user_id', sa.Integer(), nullable=True),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')

@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form method="POST" action="{{url_for('users.show', id=owner.id)}}?_method=PATCH">
+<form method="POST" action="{{url_for('users.show', id=user.id)}}?_method=PATCH">
       {{ form.csrf_token }}
   <p>
     {{ form.first_name(placeholder="first_name") }}

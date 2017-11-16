@@ -1,6 +1,5 @@
 from project import app,db
-from project.users.models import User
-from project.messages.models import Message
+from project.models import User,Message
 from flask_testing import TestCase
 import unittest
 
