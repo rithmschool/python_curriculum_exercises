@@ -12,7 +12,6 @@
 - [08 Testing With Flask](./Unit-01/08-testing/readme.md)
 - [09 Server Side Validation with WTForms](./Unit-01/09-forms/readme.md)
 
-
 ### Unit 2 - Intermediate Flask
 
 - [01 Structuring Larger Flask Applications](./Unit-02/01-blueprints/readme.md)
@@ -20,5 +19,3 @@
 - [03 Authentication with Flask Login](./Unit-02/03-hashing-sessions/readme.md)
 - [04 OAuth with Flask](./Unit-02/04-flask-login/readme.md)
 - [05 Testing Continued](./Unit-02/05-oauth/readme.md)
-- [06 Building JSON APIs](./Unit-02/06-json-apis/readme.md)
-- [07 Testing](./Unit-02/07-testing/readme.md)
