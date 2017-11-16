@@ -2,11 +2,11 @@
 
 ### Part I - User
 
-It's time to build a new application! This application should have full CRUD on the user resource. Each user should have a unique id, username, email, first_name, and last_name. 
+It's time to build a new application! This application should have full CRUD on the user resource. Each user should have a unique id, first_name, and last_name. You **must** have these fields for the test to pass.
 
 ### Part II - Message
 
-Now that you have one resource, it's time to add another! Each user should be able to write many messages. Each message should have a unique id and text (which should be limited to 100 characters - look into VARCHAR if you have trouble implementing this limit).
+Now that you have one resource, it's time to add another! Each user should be able to write many messages. Each message should have a unique id and content. You **must** have these fields for the test to pass.
 
 Your application should have RESTful routing and full CRUD on the User and Message resources. Remember that one user can send many messages. 
 

@@ -2,8 +2,9 @@
 
 Refactor your User and Message application to use WTForms. Make sure your forms do the following
 
+- Validate that each user has a `first_name` and `last_name`
+- Validate that each message has a `content`
 - have `csrf` protection
-- use `validate` or `validate_on_submit` depending on the `request.method`
 
 ### Bonus
 
