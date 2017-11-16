@@ -3,7 +3,7 @@
 Refactor your User and Message application to use WTForms. Make sure your forms do the following
 
 - have `csrf` protection
-- use `validate` or `validate_on_submit` depending on the `request.method`
+- validate forms
 
 ### Bonus
 
