@@ -12,9 +12,9 @@ users_blueprint = Blueprint(
 @users_blueprint.route('/', methods =["GET", "POST"])
 def index():
     if request.method == "POST":
-        form = UserForm()
-        if form.validate_on_submit():
-            new_user = User(request.form['first_name'], request.form['last_name'])
+        form = UserForm(request.form)
+        if form.validate():
+            new_user = User(form.first_name.data, form.last_name.data)
             db.session.add(new_user)
             db.session.commit()
             flash('User Created!')
@@ -39,15 +39,17 @@ def show(id):
     if request.method == b"PATCH":
         form = UserForm(request.form)
         if form.validate():
-            found_user.first_name = request.form['first_name']
-            found_user.last_name = request.form['last_name']
+            found_user.first_name = form.first_name.data
+            found_user.last_name = form.last_name.data
             db.session.add(found_user)
             db.session.commit()
+            flash('User Updated!')
             return redirect(url_for('users.index'))
         return render_template('users/edit.html', form=form, owner=found_user)
     if request.method == b"DELETE":
         db.session.delete(found_user)
         db.session.commit()
+        flash('User Deleted!')
         return redirect(url_for('users.index'))
     return render_template('users/show.html', owner=found_user)
 

@@ -5,10 +5,10 @@
 <form method="POST" action="{{url_for('messages.index', user_id=user.id)}}">
       {{ form.csrf_token }}
   <p>
-    {{ form.text(placeholder="text") }}
+    {{ form.content(placeholder="content") }}
     <span class="text-danger">
-      {% if form.text.errors %}
-        {% for error in form.text.errors %}
+      {% if form.content.errors %}
+        {% for error in form.content.errors %}
           {{ error }}
         {% endfor %}
       {% endif %}
