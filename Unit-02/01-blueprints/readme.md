@@ -7,6 +7,6 @@
 2. What is the purpose of blueprints?
 3. How does using blueprints help us organize bigger applications?
 
-###Exercise
+### Exercise
 
-1. Refactor a flask app to use blueprints.  Make sure to have a separate file for `models.py`, `views.py`, and `forms.py`.
+1. Create a new flask app with at least one 1:M association. Use WTForms for forms, and structure your app to use blueprints. Also, style your app, and for a bonus, use AJAX for at least one request! (Delete is a good candidate.)
