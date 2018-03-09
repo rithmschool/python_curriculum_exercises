@@ -55,6 +55,3 @@ def show(id):
         db.session.commit()
         return redirect(url_for('index'))
     return render_template('show.html', snack=found_snack)
-
-if __name__ == '__main__':
-    app.run(debug=True)
