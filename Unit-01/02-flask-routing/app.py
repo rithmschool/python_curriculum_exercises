@@ -55,13 +55,3 @@ def better_math(calculation, num1,num2):
     except ZeroDivisionError:
         return "Please do not divide by 0"
     return str(quotient)
-
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
-
-
-
-
