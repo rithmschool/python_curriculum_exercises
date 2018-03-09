@@ -18,6 +18,3 @@ def welcome_home():
 def sum():
     total = 5+5
     return str(total)
-
-if __name__ == '__main__':
-    app.run(debug=True)
