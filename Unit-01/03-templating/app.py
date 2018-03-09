@@ -55,6 +55,3 @@ def results():
     if keyword.lower() in article['title'].lower()
   ]
   return render_template('results.html', articles=matching_articles)
-  
-if __name__ == '__main__':
-    app.run(debug=True)
