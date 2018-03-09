@@ -49,6 +49,3 @@ def delete_snack(id):
     snack =  find_snack(id)
     snack_list.remove(snack)
     return redirect(url_for('snacks'))
-
-if __name__ == '__main__':
-    app.run(debug=True, port=3000)
