@@ -1,9 +1,8 @@
-{% extends 'base.html' %}
-    <p>
-        {{snack.name}} {{snack.kind}}
-        <br>
-        <a href="{{url_for('show', id=snack.id)}}">See more about {{snack.name}}</a> |
-        <a href="{{url_for('edit', id=snack.id)}}">Edit a snack</a>
-    </p>
-{% block content %}
+{% extends 'base.html' %} {% block content %}
+<p>
+    {{snack.name}} {{snack.kind}}
+    <br>
+    <a href="{{url_for('show', id=snack.id)}}">See more about {{snack.name}}</a> |
+    <a href="{{url_for('edit', id=snack.id)}}">Edit a snack</a>
+</p>
 {% endblock %}

@@ -44,13 +44,13 @@ def edit(id):
 @app.route('/snacks/<int:id>', methods = ["GET", "PATCH", "DELETE"])
 def show(id):
     found_snack = Snack.query.get(id)
-    if request.method == 'PATCH':
+    if request.method == b'PATCH':
         found_snack.name = request.form['name']
         found_snack.kind = request.form['kind']
         db.session.add(found_snack)
         db.session.commit()
         return redirect(url_for('index'))
-    if request.method == 'DELETE':
+    if request.method == b'DELETE':
         db.session.delete(found_snack)
         db.session.commit()
         return redirect(url_for('index'))
